@@ -2,7 +2,7 @@
 use strict;
 use warnings FATAL => 'all';
 
-my $filename = 'perl/hello-world/test.txt';
+my $filename = 'perl/first-contact/test.txt';
 open(my $fh, "<", $filename)  or die "Could not open $filename, $!";
 
 while (my $row = <$fh>) {
