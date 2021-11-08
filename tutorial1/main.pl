@@ -5,11 +5,16 @@ use warnings FATAL => 'all';
 use LWP::Simple;
 
 sub main {
-    print("Start scraping...");
+    print("Start scraping...\n");
     binmode(STDOUT, ':utf8'); # " To fix 'Wide character in print at'
     # print(get("https://paul-gaida.com"));
-    getstore("https://paul-gaida.com", "paul.html");
-    print("Finished scraping.")
+    my $statusCode = getstore("https://paul-gaida.com", "paul.html");
+    if (200 != $statusCode) {
+        print("Scraping failed.")
+    }
+    else {
+        print("Finished scraping.")
+    }
 }
 
 main();
