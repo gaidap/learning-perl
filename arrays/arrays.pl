@@ -28,10 +28,12 @@ sub main {
 
     close(INPUT);
 
-    print($lines[0][0] . "\n"); # Access values in multi-dimensional array
+    # print($lines[0][0] . "\n"); Access values in multi-dimensional array
 
     foreach my $line (@lines) {
-        print(Dumper($line));
+        print("Record: " . Dumper($line) . "\n");
+        print("Name: " . $line->[0] . "\n");
+        print("Birthdate: " . $line->[1] . "\n");
     }
 }
 
