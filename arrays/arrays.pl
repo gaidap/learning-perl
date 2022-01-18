@@ -2,6 +2,8 @@
 use strict;
 use warnings FATAL => 'all';
 
+use Data::Dumper;
+
 $|=1; # Deactivate output buffering
 
 sub main {
@@ -21,13 +23,15 @@ sub main {
         chomp($line);
         my @values = split(/\s*,\s*/, $line);
         # $lines[$count] = $line; One way of pushing to an array
-        push(@lines, $line);
+        push(@lines, \@values);
     }
 
     close(INPUT);
 
+    print($lines[0][0] . "\n"); # Access values in multi-dimensional array
+
     foreach my $line (@lines) {
-        print($line . "\n");
+        print(Dumper($line));
     }
 }
 
