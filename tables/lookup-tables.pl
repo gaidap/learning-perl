@@ -66,6 +66,18 @@ sub main {
         print("$key.) $value\n");
     }
     print("\n");
+
+    # Store tables in arrays
+    my @monthsFlat;
+    push(@monthsFlat, %monthTable); # Results in flat array with keys followed by its value
+    print(Dumper(@monthsFlat));
+
+    my @monthsStructured;
+    push(@monthsStructured, \%monthTable); # Results in array with a structured data (table) object
+    print(Dumper(@monthsStructured));
+    print($monthsStructured[0]{"June"} . "\n");
+
+    print("\n");
 }
 
 main();
