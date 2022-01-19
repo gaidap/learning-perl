@@ -39,17 +39,33 @@ sub main {
 
     my @months = keys(%monthTable); # use keys subroutine to get the key set
 
-    # iterate through table with the keys
+    # iterate through table with the keys (not sorted)
     foreach my $month (@months) {
         my $currentMonth = $monthTable{$month};
 
         print("$currentMonth.) $month\n");
     }
+    print("\n");
 
-    # Iterate with key and value through table
-    while(my ($key, $value) = each(%dayOfWeek)) {
+    # Iterate with key and value through table (not sorted)
+    while (my ($key, $value) = each(%dayOfWeek)) {
         print("$key: $value\n");
     }
+    print("\n");
+
+    # You can define multiple variables inline with an array
+    my ($one, $two, $three) = (1, 2, 3);
+    print("The value of \$one: $one\n");
+    print("The value of \$two: $two\n");
+    print("The value of \$three: $three\n\n");
+
+    # Iterate in order through table
+    foreach my $key (sort(keys(%dayOfWeek))) { # for and foreach are synonymous
+        my $value = $dayOfWeek{$key};
+
+        print("$key.) $value\n");
+    }
+    print("\n");
 }
 
 main();
