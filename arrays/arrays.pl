@@ -7,7 +7,6 @@ use Data::Dumper;
 $|=1; # Deactivate output buffering
 
 sub main {
-    my ($self) = @_;
 
     my $testFile = 'test.csv';
 

@@ -7,7 +7,6 @@ use Data::Dumper;
 $| = 1;
 
 sub main {
-    my ($self) = @_;
 
     my %monthTable = (    # Declare a hash table with %
         "January"   => 1, # The string quotes are optional but best practice to use

@@ -5,7 +5,6 @@ use warnings FATAL => 'all';
 $| = 1;
 
 sub main {
-    my ($self) = @_;
 
     # examples escape sequences:
     # \d => digit

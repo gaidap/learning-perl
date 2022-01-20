@@ -5,7 +5,6 @@ use warnings FATAL => 'all';
 $|=1;
 
 sub main {
-    my ($self) = @_;
 
     my $result = 'result';
     my $writeMode = '>'; # Write to file in overwrite mode, to append use >>

@@ -5,7 +5,6 @@ use warnings FATAL => 'all';
 $|=1;
 
 sub main {
-    my ($self) = @_;
     my $vimrc = '/home/pac/vimrc';
 
     # uses short circuit mechanism with boolean logic for exception handling
